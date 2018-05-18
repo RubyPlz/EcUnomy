@@ -8,8 +8,11 @@ public class Deck{
         for(int i = 0; i < 4; i++){
             deck.add(new Card("+4"));
         }
-        for(int i = 0; i < 2; i++){
-            deck.add(new Card(1, "Red"));
+        double redC = 1;
+        for(int i = 0; i < 18; i++){
+            int temp = (int)redC;
+            deck.add(new Card(temp, "Red"));
+            redC += .5;
         }
         for(int i = 0; i < 2; i++){
             deck.add(new Card(1, "Blue"));
@@ -19,6 +22,9 @@ public class Deck{
         }
         for(int i = 0; i < 2; i++){
             deck.add(new Card(1, "Yellow"));
+        }
+        for(int i = 0; i < 2; i++){
+            deck.add(new Card(2, ""));
         }
     }
 }

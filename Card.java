@@ -1,6 +1,6 @@
 import java.util.*;
 
-abstract class Card
+public class Card
 {
     public int value;
     public String color;

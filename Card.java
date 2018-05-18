@@ -34,4 +34,19 @@ abstract class Card
     public int getValue(){
         return value;
     }
+    public boolean hasColor(){
+        return hasColor;
+    }
+    public boolean isSpecial(){
+        return isSpecial;
+    }
 }
+
+
+
+
+
+
+
+
+

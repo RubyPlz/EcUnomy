@@ -1,44 +1,37 @@
 import java.util.*;
-
+import java.awt.*;
 public class Card
 {
     public int value;
-    public String color;
-    public boolean hasColor;
+    public Color color;
     public String special;
-    public boolean isSpecial;
-    public Card(int v, String c){ //Number Cards
+    public int type; //1: Numbers 2: +2, Skip, Reverse 3: Wild, +4
+    public Card(int v, Color c){ //Number Cards
         value = v;
-        color = c; 
-        hasColor = true;
+        color = c;
         special = "";
-        isSpecial = false;
+        type = 1;
     }
-    public Card(String s, String c){ //+2, Skip, Reverse
+    public Card(String s, Color c){ //+2, Skip, Reverse
         value = -1;
         color = c;
-        hasColor = true;
         special = s;
-        isSpecial = true;
+        type = 2;
     }
     public Card(String s){ //Wild, +4
         value = -1;
-        color = "";
-        hasColor = false;
+        color = null;
         special = s;
-        isSpecial = true;
+        type = 3;
     }
-    public String getColor(){
+    public Color getColor(){
         return color;
     }
     public int getValue(){
         return value;
     }
-    public boolean hasColor(){
-        return hasColor;
-    }
-    public boolean isSpecial(){
-        return isSpecial;
+    public int getType(){
+        return type;
     }
     public String toString(){
         return "Color: " + color + "\n" + "Value: " + value + "\n" + 

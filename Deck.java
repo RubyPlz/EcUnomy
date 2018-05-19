@@ -10,6 +10,7 @@ public class Deck{
         deck.add(new Card("communism"));
         deck.add(new Card("+2 all"));
         deck.add(new Card("swap hands"));
+        deck.add(new Card("no u"));
     }
 
     public void addColor(String c){
@@ -20,6 +21,7 @@ public class Deck{
             deck.add(new Card("+2", c));
             deck.add(new Card("skip", c));
             deck.add(new Card("reverse", c));
+
         }
         deck.add(new Card("+4"));
         deck.add(new Card("wild"));
@@ -63,13 +65,14 @@ public class Deck{
         while (deck.size() > 0)
         {
             Card card = deck.remove(deck.size() - 1);
-            int i = gen.nextInt(MAX_SIZE);
-            while (array[i] != null)
-                i = gen.nextInt(MAX_SIZE);
-            array[i] = card;
+            int z = gen.nextInt(MAX_SIZE);
+            while (array[z] != null)
+                z = gen.nextInt(MAX_SIZE);
+            array[z] = card;
+
+            for (Card c : array)
+                deck.add(c);
         }
-        for (Card card : array)
-            deck.add(card);
     }
 
     public String toString()
@@ -78,5 +81,6 @@ public class Deck{
         for (Card card : deck)
             result += card + "\n";
         return result;
+
     }
 }

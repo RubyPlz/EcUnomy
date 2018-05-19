@@ -44,4 +44,8 @@ public class Card
     public boolean isSpecial(){
         return isSpecial;
     }
+    public String toString(){
+        return "Color: " + color + "\n" + "Value: " + value + "\n" + 
+        "Special: " + special;
+    }
 }

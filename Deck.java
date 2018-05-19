@@ -20,12 +20,13 @@ public class Deck{
                 deck.add(new Card(i, c));
             }
             deck.add(new Card("+2", c));
-            deck.add(new Card("skip", c));
-            deck.add(new Card("reverse", c));
+            deck.add(new Card("Skip", c));
+            deck.add(new Card("Reverse", c));
 
         }
+        deck.add(new Card(0, c));
         deck.add(new Card("+4"));
-        deck.add(new Card("wild"));
+        deck.add(new Card("Wild"));
     }
 
     public boolean isEmpty()

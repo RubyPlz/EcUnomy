@@ -13,7 +13,7 @@ public class Card
     public Card(int v, Color c){ //Number Cards
         value = v;
         color = c;
-        special = "";
+        special = null;
         type = 1;
     }
     public Card(String s, Color c){ //+2, Skip, Reverse

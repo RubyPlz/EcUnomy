@@ -4,34 +4,35 @@ public class Deck{
     private static final int MAX_SIZE = 112;
     private ArrayList<Card> deck;
     public Deck(){
+        deck = new ArrayList<Card>();
         Card c = null;
         addColor(Color.RED, 0);
         addColor(Color.YELLOW, 1);
         addColor(Color.GREEN, 2);
         addColor(Color.BLUE,3);
-        c = new Card("Communism", 7); c.setPos(0, 4*75);
+        c = new Card("Communism", 7); c.setPos(0, 4);
         deck.add(c);
-        c = new Card("+2 all", 8); c.setPos(0, 5*75);
+        c = new Card("+2 all", 8); c.setPos(0, 5);
         deck.add(c);
-        c = new Card("Swap Hands", 9); c.setPos(0, 6*75);
+        c = new Card("Swap Hands", 9); c.setPos(0, 6);
         deck.add(c);
-        c = new Card("no u", 10); c.setPos(0, 7*75);
+        c = new Card("no u", 10); c.setPos(0, 7);
         deck.add(c);
     }
 
     public void addColor(Color c, int rowpos){
         int r = rowpos;
-        Card card = null;
+        Card card = new Card(0, Color.BLACK);
         for(int k = 0; k<2; k++){
             for(int i = 1; i< 10; i++){
-                card = new Card(i, c); card.setPos(r, i*50);
+                card = new Card(i, c); card.setPos(r, i);
                 deck.add(card);
             }
-            card = new Card("+2", c, 2); card.setPos(r, 12*50);
+            card = new Card("+2", c, 2); card.setPos(r, 12);
             deck.add(card);
-            card = new Card("Skip", c, 3); card.setPos(r, 10*50);
+            card = new Card("Skip", c, 3); card.setPos(r, 10);
             deck.add(card);
-            card = new Card("Reverse", c, 4); card.setPos(r, 11*50);
+            card = new Card("Reverse", c, 4); card.setPos(r, 11);
             deck.add(card);
             r+=4;
         }

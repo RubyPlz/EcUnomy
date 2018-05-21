@@ -27,8 +27,10 @@ public class ImageDemo
                 JFrame editorFrame = new JFrame("Image Demo"+r+" "+c);
                 editorFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                 BufferedImage subImage = new BufferedImage(1,1,5);
+                int row = (r==0)?r*75:r*75-1;
+                int col = (c==0)?c*50:c*50-1;
                 try{
-                    subImage = image.getSubimage(c*50-1, r*75-1, 50, 75);
+                    subImage = image.getSubimage(col, row, 50, 75);
                 }catch(Exception e){
                     System.out.println(r+" "+c);
                 }

@@ -4,29 +4,43 @@ public class Deck{
     private static final int MAX_SIZE = 112;
     private ArrayList<Card> deck;
     public Deck(){
-        addColor(Color.RED);
-        addColor(Color.YELLOW);
-        addColor(Color.BLUE);
-        addColor(Color.GREEN);
-        deck.add(new Card("Communism", 7));
-        deck.add(new Card("+2 all", 8));
-        deck.add(new Card("Swap Hands", 9));
-        deck.add(new Card("no u", 10));
+        Card c = null;
+        addColor(Color.RED, 0);
+        addColor(Color.YELLOW, 1);
+        addColor(Color.GREEN, 2);
+        addColor(Color.BLUE,3);
+        c = new Card("Communism", 7); c.setPos(0, 4*75);
+        deck.add(c);
+        c = new Card("+2 all", 8); c.setPos(0, 5*75);
+        deck.add(c);
+        c = new Card("Swap Hands", 9); c.setPos(0, 6*75);
+        deck.add(c);
+        c = new Card("no u", 10); c.setPos(0, 7*75);
+        deck.add(c);
     }
 
-    public void addColor(Color c){
+    public void addColor(Color c, int rowpos){
+        int r = rowpos;
+        Card card = null;
         for(int k = 0; k<2; k++){
             for(int i = 1; i< 10; i++){
-                deck.add(new Card(i, c));
+                card = new Card(i, c); card.setPos(r, i*50);
+                deck.add(card);
             }
-            deck.add(new Card("+2", c, 2));
-            deck.add(new Card("Skip", c, 3));
-            deck.add(new Card("Reverse", c, 4));
-
+            card = new Card("+2", c, 2); card.setPos(r, 12*50);
+            deck.add(card);
+            card = new Card("Skip", c, 3); card.setPos(r, 10*50);
+            deck.add(card);
+            card = new Card("Reverse", c, 4); card.setPos(r, 11*50);
+            deck.add(card);
+            r+=4;
         }
-        deck.add(new Card(0, c));
-        deck.add(new Card("+4", 5));
-        deck.add(new Card("Wild", 6));
+        card = new Card(0, c); card.setPos(rowpos, 0);
+        deck.add(card);
+        card = new Card("+4", 5); card.setPos(rowpos+4, 13);
+        deck.add(card);
+        card = new Card("Wild", 6); card.setPos(rowpos, 13);
+        deck.add(card);
     }
 
     public boolean isEmpty()

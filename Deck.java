@@ -47,16 +47,16 @@ public class Deck{
             return deck.remove(deck.size() -1);
     }
 
-    public Card[] deal(int number)
+    public ArrayList<Card> deal(int number)
     {
         if (number > deck.size())
             return null;
         else
         {
-            Card[] hand = new Card[number];
-            for (int i = 0; i < hand.length; i++)
-                hand[i] = deal();
-            return hand;
+            ArrayList<Card> temp = new ArrayList<Card>();
+            for (int i = 0; i < number; i++)
+                temp.add(deck.remove(0));
+            return temp;
 
         }
     }

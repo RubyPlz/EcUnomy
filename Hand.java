@@ -13,5 +13,15 @@ public class Hand{
     public Card play(int i){
         return hand.remove(i);
     }
+    
+    public int getSize(){
+        return hand.size();
+        
+    }
+    
+    public Card getCard(int i){
+        return hand.get(i);
+        
+    }
 
 }

@@ -9,24 +9,24 @@ public class Card
     public int value;
     public Color color;
     public String special;
-    public int type; //1: Numbers 2: +2, Skip, Reverse 3: Wild, +4
+    public int type; //1: Numbers 2-4: +2, Skip, Reverse 5-10: Wild, +4, Communism, +2 all, swap, no u
     public Card(int v, Color c){ //Number Cards
         value = v;
         color = c;
         special = null;
         type = 1;
     }
-    public Card(String s, Color c){ //+2, Skip, Reverse
+    public Card(String s, Color c, int t){ //+2, Skip, Reverse
         value = -1;
         color = c;
         special = s;
-        type = 2;
+        type = t;
     }
-    public Card(String s){ //Wild, +4
+    public Card(String s, int t){ //Wild, +4, Communism, +2 all, swap, no u
         value = -1;
         color = null;
         special = s;
-        type = 3;
+        type = t;
     }
     public Color getColor(){
         return color;

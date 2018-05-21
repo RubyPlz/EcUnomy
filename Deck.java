@@ -8,10 +8,10 @@ public class Deck{
         addColor(Color.YELLOW);
         addColor(Color.BLUE);
         addColor(Color.GREEN);
-        deck.add(new Card("Communism"));
-        deck.add(new Card("+2 all"));
-        deck.add(new Card("Swap Hands"));
-        deck.add(new Card("no u"));
+        deck.add(new Card("Communism", 7));
+        deck.add(new Card("+2 all", 8));
+        deck.add(new Card("Swap Hands", 9));
+        deck.add(new Card("no u", 10));
     }
 
     public void addColor(Color c){
@@ -19,14 +19,14 @@ public class Deck{
             for(int i = 1; i< 10; i++){
                 deck.add(new Card(i, c));
             }
-            deck.add(new Card("+2", c));
-            deck.add(new Card("Skip", c));
-            deck.add(new Card("Reverse", c));
+            deck.add(new Card("+2", c, 2));
+            deck.add(new Card("Skip", c, 3));
+            deck.add(new Card("Reverse", c, 4));
 
         }
         deck.add(new Card(0, c));
-        deck.add(new Card("+4"));
-        deck.add(new Card("Wild"));
+        deck.add(new Card("+4", 5));
+        deck.add(new Card("Wild", 6));
     }
 
     public boolean isEmpty()

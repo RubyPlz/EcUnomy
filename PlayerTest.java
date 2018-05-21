@@ -36,6 +36,6 @@ public class PlayerTest
         for(int i =0; i<ownHand.getSize();i++){
             ownHand.getCard(i).toString();
         }
-        }
-
     }
+
+}

@@ -25,22 +25,22 @@ public class Deck{
         Card card = new Card(0, Color.BLACK);
         for(int k = 0; k<2; k++){
             for(int i = 1; i< 10; i++){
-                card = new Card(i, c); card.setPos(r, i);
+                card = new Card(i, c); card.setPos(i, r);
                 deck.add(card);
             }
-            card = new Card("+2", c, 2); card.setPos(r, 12);
+            card = new Card("+2", c, 2); card.setPos(12, r);
             deck.add(card);
-            card = new Card("Skip", c, 3); card.setPos(r, 10);
+            card = new Card("Skip", c, 3); card.setPos(10, r);
             deck.add(card);
-            card = new Card("Reverse", c, 4); card.setPos(r, 11);
+            card = new Card("Reverse", c, 4); card.setPos(11, r);
             deck.add(card);
             r+=4;
         }
-        card = new Card(0, c); card.setPos(rowpos, 0);
+        card = new Card(0, c); card.setPos(0,rowpos);
         deck.add(card);
-        card = new Card("+4", 5); card.setPos(rowpos+4, 13);
+        card = new Card("+4", 5); card.setPos(13, rowpos+4);
         deck.add(card);
-        card = new Card("Wild", 6); card.setPos(rowpos, 13);
+        card = new Card("Wild", 6); card.setPos(13, rowpos);
         deck.add(card);
     }
 

@@ -6,8 +6,8 @@ public class Hand{
         hand = new ArrayList<Card>();
     }
     
-    public void add(Card c){
-        hand.add(c);
+    public void add(Deck d){
+        hand.add(d.deal());
     }
     
     public Card play(int i){

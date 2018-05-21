@@ -5,12 +5,7 @@ import javax.imageio.*;
 import javax.swing.*;
 
 /**
- * A Java class to demonstrate how to load an image from disk with the
- * ImageIO class. Also shows how to display the image by creating an
- * ImageIcon, placing that icon an a JLabel, and placing that label on
- * a JFrame.
  * 
- * @author alvin alexander, alvinalexander.com
  */
 public class ImageDemo
 {

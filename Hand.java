@@ -10,8 +10,22 @@ public class Hand{
         hand.add(c);
     }
     
+    public void add(Card[] c){
+        for(Card card: c){
+            hand.add(card);
+        }
+    }
+    
     public Card play(int i){
         return hand.remove(i);
+    }
+    
+    public Card[] playMultiple(ArrayList<Integer> indices){
+        Card[] c = new Card[indices.size()];
+        for(int i = 0; i< c.length; i++){
+            c[i] = hand.get(indices.get(i));
+        }
+        return c;
     }
     
     public int getSize(){

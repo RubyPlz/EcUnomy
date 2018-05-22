@@ -22,7 +22,7 @@ public class ImageDemo
             System.exit(1);
         }
         Deck deck = new Deck();
-
+        deck.shuffle();
         while(!deck.isEmpty()){
             Card c = deck.deal();
             JFrame editorFrame = new JFrame(c.toString());

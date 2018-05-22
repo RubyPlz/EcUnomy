@@ -88,9 +88,10 @@ public class Deck{
                 z = gen.nextInt(MAX_SIZE);
             array[z] = card;
 
-            for (Card c : array)
-                deck.add(c);
+            
         }
+        for (Card c : array)
+                deck.add(c);
     }
 
     public String toString()

@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Player here.
  *
@@ -21,11 +21,4 @@ public class Player
         
     }
     
-    public boolean acceptTrade(){
-        return true;
-    }
-    
-    public boolean declineTrade(){
-        return false;
-    }
 }

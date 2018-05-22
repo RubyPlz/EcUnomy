@@ -7,21 +7,21 @@ import javax.swing.*;
 public class Card
 {
     public int value;
-    public Color color;
+    public String color;
     public String special;
-    public int type; //1: Numbers 2-4: +2, Skip, Reverse 5-10: Wild, +4, Communism, +2 all, swap, no u
+    public Type type; //1: Numbers 2-4: +2, Skip, Reverse 5-10: Wild, +4, Communism, +2 all, swap, no u
     public int imagex;
     public int imagey;
-    public Card(int v, Color c){ //Number Cards
+    public Card(int v, String c){ //Number Cards
         value = v;
         color = c;
         special = null;
-        type = 1;
+        type = Type.NUMBER;
         imagex = 0;
         imagey = 0;
     }
 
-    public Card(String s, Color c, int t){ //+2, Skip, Reverse
+    public Card(String s, String c, Type t){ //+2, Skip, Reverse
         value = -1;
         color = c;
         special = s;
@@ -30,7 +30,7 @@ public class Card
         imagey = 0;
     }
 
-    public Card(String s, int t){ //Wild, +4, Communism, +2 all, swap, no u
+    public Card(String s, Type t){ //Wild, +4, Communism, +2 all, swap, no u
         value = -1;
         color = null;
         special = s;
@@ -39,7 +39,7 @@ public class Card
         imagey = 0;
     }
 
-    public Color getColor(){
+    public String getColor(){
         return color;
     }
 
@@ -47,7 +47,7 @@ public class Card
         return value;
     }
 
-    public int getType(){
+    public Type getType(){
         return type;
     }
 

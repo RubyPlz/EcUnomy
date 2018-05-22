@@ -6,41 +6,41 @@ public class Deck{
     public Deck(){
         deck = new ArrayList<Card>();
         Card c = null;
-        addColor(Color.RED, 0);
-        addColor(Color.YELLOW, 1);
-        addColor(Color.GREEN, 2);
-        addColor(Color.BLUE,3);
-        c = new Card("Communism", 7); c.setPos(0, 4);
+        addColor("red", 0);
+        addColor("yellow", 1);
+        addColor("green", 2);
+        addColor("blue",3);
+        c = new Card("Communism", Type.COMMUNISM); c.setPos(0, 4);
         deck.add(c);
-        c = new Card("+2 all", 8); c.setPos(0, 5);
+        c = new Card("+2 all", Type.PLUS2ALL); c.setPos(0, 5);
         deck.add(c);
-        c = new Card("Swap Hands", 9); c.setPos(0, 6);
+        c = new Card("Swap Hands", Type.SWAPHANDS); c.setPos(0, 6);
         deck.add(c);
-        c = new Card("no u", 10); c.setPos(0, 7);
+        c = new Card("no u", Type.NOU); c.setPos(0, 7);
         deck.add(c);
     }
 
-    public void addColor(Color c, int rowpos){
+    public void addColor(String c, int rowpos){
         int r = rowpos;
-        Card card = new Card(0, Color.BLACK);
+        Card card = null;
         for(int k = 0; k<2; k++){
             for(int i = 1; i< 10; i++){
                 card = new Card(i, c); card.setPos(i, r);
                 deck.add(card);
             }
-            card = new Card("+2", c, 2); card.setPos(12, r);
+            card = new Card("+2", c, Type.PLUS2); card.setPos(12, r);
             deck.add(card);
-            card = new Card("Skip", c, 3); card.setPos(10, r);
+            card = new Card("Skip", c, Type.SKIP); card.setPos(10, r);
             deck.add(card);
-            card = new Card("Reverse", c, 4); card.setPos(11, r);
+            card = new Card("Reverse", c, Type.REVERSE); card.setPos(11, r);
             deck.add(card);
             r+=4;
         }
         card = new Card(0, c); card.setPos(0,rowpos);
         deck.add(card);
-        card = new Card("+4", 5); card.setPos(13, rowpos+4);
+        card = new Card("+4", Type.PLUS4); card.setPos(13, rowpos+4);
         deck.add(card);
-        card = new Card("Wild", 6); card.setPos(13, rowpos);
+        card = new Card("Wild", Type.WILD); card.setPos(13, rowpos);
         deck.add(card);
     }
 

@@ -48,7 +48,8 @@ public class Card
     }
 
     public Type getType(){
-        return type;
+        int lit;
+    	return type;
     }
 
     public void setPos(int x ,int y){

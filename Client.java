@@ -1,4 +1,4 @@
-// A Java program for a Client
+// A Java program for a ClientTest
 import java.net.*;
 import java.io.*;
  
@@ -48,7 +48,7 @@ public class Client
             {
                 System.out.println(i);
             }
-        }
+            }
  
         // close the connection
         try
@@ -63,7 +63,7 @@ public class Client
         }
     }
  
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         Client client = new Client("127.0.0.1", 5000);
     }

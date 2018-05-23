@@ -48,7 +48,7 @@ public class Card
     }
 
     public Type getType(){
-        int lit;
+        
     	return type;
     }
 

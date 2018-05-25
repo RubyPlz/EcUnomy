@@ -33,7 +33,7 @@ public class ImageDemo
             JLabel jLabel = new JLabel();
             jLabel.setIcon(imageIcon);
             editorFrame.getContentPane().add(jLabel, BorderLayout.CENTER);
-
+            int x;
             editorFrame.pack();
             editorFrame.setLocationRelativeTo(null);
             editorFrame.setVisible(true);

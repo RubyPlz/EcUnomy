@@ -1,6 +1,7 @@
 import java.util.*;
 import java .awt.*;
 public class Player{
+
     private ArrayList<Card> hand;
     private String name;
     private int numcards;
@@ -30,6 +31,10 @@ public class Player{
             c[i] = hand.get(indices.get(i));
         }
         return c;
+    }
+    
+    public String getName() {
+    	return name;
     }
     
     public int getSize(){

@@ -106,6 +106,11 @@ public class Deck{
     public void add(Card c){
         deck.add(c);
     }
+    public void add(ArrayList<Card> x) {
+    	for(Card c:x) {
+    		add(c);
+    	}
+    }
 
 }
 
